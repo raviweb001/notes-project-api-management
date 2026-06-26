@@ -1,0 +1,26 @@
+{
+    "name": "notes-management-project",
+    "version": "1.0.0",
+    "description": "Secure, clean, and organized day-by-day logging system with Node.js",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js"
+    },
+    "keywords": [
+        "notes",
+        "api",
+        "express",
+        "nodejs",
+        "portfolio"
+    ],
+    "author": "Ravi",
+    "license": "ISC",
+    "type": "commonjs",
+    "dependencies": {
+        "express": "^5.2.1"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.0"
+    }
+}
