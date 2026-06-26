@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Management API</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="toastContainer" class="toast-container"></div>
+
+    <div class="app-container">
+
+        <header class="app-header">
+            <h1><i class="fa-solid fa-book-journal-whills"></i> Notes Management API</h1>
+            <p class="subtitle">
+                Secure, clean, and organized day-by-day logging system with Node.js
+            </p>
+        </header>
+
+        <main class="app-content">
+
+            <section class="card form-section">
+                <h2><i class="fa-solid fa-pen-to-square"></i> Create New Log</h2>
+
+                <form id="noteForm">
+
+                    <div class="form-group">
+                        <label for="noteDate">Select Date</label>
+                        <input type="date" id="noteDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="noteTitle">Note Title</label>
+                        <input type="text" id="noteTitle" placeholder="Enter a short title..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="noteText">Notes Content</label>
+                        <textarea id="noteText" placeholder="Type your notes here..." rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary">
+                        <i class="fa-solid fa-cloud-arrow-up"></i> Save Entry
+                    </button>
+
+                </form>
+            </section>
+
+            <section class="card notes-section">
+
+                <h2><i class="fa-solid fa-list-check"></i> Saved Entries</h2>
+
+                <div class="form-group filter-group">
+
+                    <label for="filterDate">Filter by Date</label>
+
+                    <div class="filter-row">
+                        <input type="date" id="filterDate">
+                        <button type="button" id="btnClearFilter" class="btn-secondary" title="Clear Filter">
+                            <i class="fa-solid fa-rotate-left"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div id="notesList" class="notes-list">
+                    <div class="empty-state">
+                        <i class="fa-regular fa-folder-open fa-3x"></i>
+                        <p class="no-notes">No notes available for this date.</p>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
